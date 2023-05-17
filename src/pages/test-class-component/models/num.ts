@@ -1,6 +1,6 @@
-import { createModel, request } from 'ice';
+import { request } from 'ice';
 
-export default createModel({
+export default {
   // 定义  model 的初始 state
   state: 0,
   // 定义改变该 model 状态的纯函数
@@ -15,7 +15,7 @@ export default createModel({
     // effects的函数可以异步，获取数据的场景，需要调用effects方法获取数据后再调用reducers方法更新数据
     async initNum() {
       const res = await request('https://mocks.sto.cn/mock/test-mocks/base/getNum');
-      this.setNum(res.data);
+      dispatch.num.setNum(res.data);
     },
   }),
-});
+};

@@ -1,14 +1,14 @@
 import { useEffect } from 'react';
 import styles from './index.module.css';
-// import { useCount } from './store/zustand';
+import { useCount } from './store/zustand';
 import numStore from '@/store';
 
 const Home = function () {
-  // const { count, initCount, setCount } = useCount();
+  const { count, initCount, setCount } = useCount();
   const [ num, numDispatcher ] = numStore.useModel('num');
 
   useEffect(() => {
-    // initCount();
+    initCount();
     numDispatcher.initNum();
   }, []);
 
@@ -20,10 +20,10 @@ const Home = function () {
         </p>
       </header>
       <main>
-        {/* <p>zustand实现</p>
+        <p>zustand实现</p>
         <button className={styles.button} type="button" onClick={setCount}>
           👍🏻 {count}
-        </button> */}
+        </button>
 
         <p style={{marginTop: 20}}>ice实现</p>
         <button className={styles.button} type="button" onClick={numDispatcher.setNum}>

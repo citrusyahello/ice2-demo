@@ -1,9 +1,8 @@
 import React from 'react';
 import styles from './index.module.css';
 import { useCount, COUNT } from '../test-fn-component/store/zustand';
-import numStore from './store';
+import numStore from '@/store';
 
-@numStore.withModel('num')
 class Home extends React.PureComponent<any, any> {
 
   state: {
@@ -86,4 +85,4 @@ class Home extends React.PureComponent<any, any> {
   }
 }
 
-export default Home;
+export default numStore.withModel('num')(Home);

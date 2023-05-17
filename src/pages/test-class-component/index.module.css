@@ -41,6 +41,5 @@
   padding: 10px 35px;
   background: var(--primary);
   box-shadow: 0 5px 10px 0 #ddd;
-  color: white;
   font-size: calc(10px + 2vmin);
 }

@@ -1,4 +1,11 @@
+// src/store.ts
 import { createStore } from 'ice';
-import numModel from './models/num';
+import num from './models/num';
 
-export default createStore({ num: numModel });
+const store = createStore(
+  {
+    num,
+  },
+);
+
+export default store;

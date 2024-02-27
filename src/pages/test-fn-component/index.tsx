@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import styles from './index.module.css';
 import { useCount } from './store/zustand';
-import numStore from '@/store';
+import numStore from './store';
 
 const Home = function () {
   const { count, initCount, setCount } = useCount();

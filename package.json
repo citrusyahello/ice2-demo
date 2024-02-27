@@ -12,7 +12,7 @@
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.2",
     "eslint": "^7.30.0",
-    "ice.js": "^2.6.4",
+    "ice.js": "^2.6.8",
     "stylelint": "^13.7.2"
   },
   "scripts": {

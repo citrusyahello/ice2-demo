@@ -1,11 +1,15 @@
 import styles from './index.module.css';
+import { history } from 'ice';
 
 const Guide = () => {
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>Welcome to icejs!</h2>
+      <h2 className={styles.title} onClick={() => {
+        // history?.push('/test-class-component')
+        history?.push('/test-fn-component')
+      }}>Welcome to icejs!</h2>
 
-      <p className={styles.description}>This is a awesome project, enjoy it!</p>
+      <p className={styles.description} onClick={() => history?.push('/test-class-component')}>This is a awesome project, enjoy it!</p>
 
       <div className={styles.action}>
         <a

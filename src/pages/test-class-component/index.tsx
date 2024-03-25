@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './index.module.css';
 import { useCount, COUNT } from '../test-fn-component/store/zustand';
-import numStore from '@/store';
+import numStore from './store';
 
 class Home extends React.PureComponent<any, any> {
 

@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import styles from './index.module.css';
 import { useCount } from './store/zustand';
 import numStore from './store';
+import ChildTest from './components/ChildTest/ChildTest';
 
 const Home = function () {
   const { count, initCount, setCount } = useCount();
@@ -30,25 +31,7 @@ const Home = function () {
           👍🏻 {num}
         </button>
 
-        <p>
-          <a
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.link}
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            href="https://v3.ice.work/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.link}
-          >
-            Learn ice.js
-          </a>
-        </p>
+        <ChildTest/>
       </main>
     </div>
   );
